@@ -40,7 +40,6 @@ export default function Testimonials() {
                 </div>
                 <p>{testimonial.text}</p>
                 <div className="client-info">
-                  <div className="client-avatar" style={{backgroundImage: `url(${testimonial.image || '/testimonial-1.jpeg'})`, backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
                   <div className="client-details">
                     <strong>{testimonial.name}</strong>
                     <div>{testimonial.role}</div>

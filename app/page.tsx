@@ -4,7 +4,6 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Gallery from '../components/Gallery'
 import Services from '../components/Services'
-import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -52,7 +51,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Testimonials />
       <Footer />
     </main>
   )
