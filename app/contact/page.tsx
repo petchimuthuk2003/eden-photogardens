@@ -38,27 +38,33 @@ export default function Contact() {
     setStatus('loading')
     setErrorMsg('')
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
+    // Temporarily disabled for Vercel deployment.
+    // Restore this API call when email/database functionality is enabled again.
+    //
+    // try {
+    //   const res = await fetch('/api/contact', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(form),
+    //   })
+    //
+    //   const data = await res.json()
+    //
+    //   if (!res.ok) {
+    //     setStatus('error')
+    //     setErrorMsg(data.error || 'Something went wrong. Please try again.')
+    //     return
+    //   }
+    //
+    //   setStatus('success')
+    //   setForm({ name: '', phone: '', email: '', service: '', date: '', message: '' })
+    // } catch {
+    //   setStatus('error')
+    //   setErrorMsg('Network error. Please check your connection and try again.')
+    // }
 
-      const data = await res.json()
-
-      if (!res.ok) {
-        setStatus('error')
-        setErrorMsg(data.error || 'Something went wrong. Please try again.')
-        return
-      }
-
-      setStatus('success')
-      setForm({ name: '', phone: '', email: '', service: '', date: '', message: '' })
-    } catch {
-      setStatus('error')
-      setErrorMsg('Network error. Please check your connection and try again.')
-    }
+    setStatus('success')
+    setForm({ name: '', phone: '', email: '', service: '', date: '', message: '' })
   }
 
   return (
@@ -82,7 +88,7 @@ export default function Contact() {
                 <span className="form-success-icon">✅</span>
                 <div>
                   <strong>Inquiry Submitted!</strong>
-                  <p>Thank you, we'll respond within 24 hours.</p>
+                  <p>Thank you! Your message has been received. Email functionality will be enabled soon.</p>
                 </div>
               </div>
             )}

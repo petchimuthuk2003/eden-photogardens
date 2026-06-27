@@ -139,7 +139,7 @@ export default function AdminPage() {
           </div>
           <div className="admin-stat-card">
             <span className="stat-number">
-              {[...new Set(inquiries.map((i) => i.service))].length}
+              {Array.from(new Set(inquiries.map((i) => i.service))).length}
             </span>
             <span className="stat-label">Service Types</span>
           </div>
