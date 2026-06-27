@@ -3,22 +3,19 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "Eunice delivered stunning, exceptionally professional work with remarkable professionalism. Their creative angles, lighting, attention to detail made our event truly memorable. Highly recommend!",
+      text: "Eunice delivered stunning, professional work with creative angles, beautiful lighting, and careful attention to every important moment.",
       name: "Varshan Ram",
-      role: "Groom",
-      image: "/testimonial-1.jpeg"
+      role: "Groom"
     },
     {
-      text: "Thanks Eunice for best delivery. Eunice exceeded expectations. Their team captured every moment perfectly and professionally, giving us memories that will last a lifetime. Impeccable quality!",
+      text: "The team captured our event perfectly and delivered memories we will always treasure. The quality and service were excellent from start to finish.",
       name: "Rahul Sanyal",
-      role: "Groom",
-      image: "/home-gallery-4.png"
+      role: "Groom"
     },
     {
-      text: "Their photography was absolutely top-notch—clean, cinematic, and professional. Eunice exceeded our needs instantly and delivered exceptional results for our special day and portrait work.",
+      text: "Their photography felt clean, cinematic, and polished. Eden Photo Garden understood the brief quickly and delivered exactly what we needed.",
       name: "Nanditha",
-      role: "Photographer",
-      image: "/home-services-2.png"
+      role: "Photographer"
     }
   ]
 
@@ -26,17 +23,14 @@ export default function Testimonials() {
     <section className="testimonials-section">
       <div className="container">
         <h2>What Our Clients Say</h2>
-        <p className="testimonials-subtitle">Real stories from couples and clients who trusted us with their most precious moments.</p>
+        <p className="testimonials-subtitle">Kind words from clients who trusted us with their favorite moments.</p>
         <div className="testimonials-wrapper">
           <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial">
-                <div className="rating-stars">
-                  <span className="star">★</span>
-                  <span className="star">★</span>
-                  <span className="star">★</span>
-                  <span className="star">★</span>
-                  <span className="star">★</span>
+            {testimonials.map((testimonial) => (
+              <article key={testimonial.name} className="testimonial">
+                <div className="rating-stars" aria-label="5 out of 5 rating">
+                  <span>5.0</span>
+                  <span>Rated Excellent</span>
                 </div>
                 <p>{testimonial.text}</p>
                 <div className="client-info">
@@ -45,7 +39,7 @@ export default function Testimonials() {
                     <div>{testimonial.role}</div>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
