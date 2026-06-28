@@ -29,8 +29,8 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <article key={testimonial.name} className="testimonial">
                 <div className="rating-stars" aria-label="5 out of 5 rating">
+                  <span aria-hidden="true">★★★★★</span>
                   <span>5.0</span>
-                  <span>Rated Excellent</span>
                 </div>
                 <p>{testimonial.text}</p>
                 <div className="client-info">

@@ -6,7 +6,6 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const slides = [
-    '/hero-image.png',
     '/services-banner.jpg',
     '/gallery-image-5.jpg',
   ]
