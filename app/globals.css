@@ -489,20 +489,23 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  justify-items: center;
 }
 
 .testimonial {
-  background: #fff4e8;
-  padding: 24px 22px;
+  background: #fff8f1;
+  width: 100%;
+  max-width: 320px;
+  padding: 22px 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(239, 123, 9, 0.12);
+  box-shadow: 0 8px 20px rgba(239, 123, 9, 0.08);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   aspect-ratio: 1;
   position: relative;
   transition: all 0.3s ease;
-  border: 1px solid rgba(239, 123, 9, 0.18);
+  border: 1px solid rgba(239, 123, 9, 0.1);
   overflow: hidden;
 }
 
@@ -512,23 +515,23 @@ body {
   top: 18px;
   right: 24px;
   font-size: 4rem;
-  color: #ef7b09;
-  opacity: 0.08;
+  color: #f6a04d;
+  opacity: 0.07;
   font-family: 'Poppins', sans-serif;
   line-height: 1;
 }
 
 .testimonial:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-  border-color: #ef7b09;
+  box-shadow: 0 12px 24px rgba(239, 123, 9, 0.1);
+  border-color: rgba(239, 123, 9, 0.22);
 }
 
 .testimonial p {
-  margin-bottom: 14px;
+  margin-bottom: 4px;
   color: #555;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.5;
   text-align: left;
   position: relative;
   z-index: 2;
@@ -587,7 +590,7 @@ body {
 }
 
 .rating-stars span:first-child {
-  color: #ef7b09;
+  color: #f6a04d;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
@@ -595,7 +598,7 @@ body {
 }
 
 .rating-stars span:last-child {
-  color: #7a3d07;
+  color: #9a5a1a;
   font-size: 0.85rem;
   font-weight: 600;
 }
@@ -878,6 +881,7 @@ body {
 .who-we-are-text {
   text-align: left;
   position: relative;
+  max-width: 620px;
 }
 
 .who-we-are-text h2 {
@@ -904,17 +908,12 @@ body {
   color: #555;
   margin-bottom: 28px;
   position: relative;
-  padding-left: 24px;
+  padding-left: 0;
+  text-align: left;
 }
 
 .who-we-are-text p::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 12px;
-  width: 4px;
-  height: 20px;
-  background: #ef7b09;
+  display: none;
 }
 
 .meet-team {
@@ -2237,7 +2236,8 @@ body {
   }
   
   .testimonial {
-    padding: 20px 18px;
+    max-width: 300px;
+    padding: 18px 16px;
     min-height: 0;
   }
   
@@ -2497,9 +2497,9 @@ body {
   }
   
   .testimonial {
-    padding: 18px 16px;
+    padding: 16px 14px;
     aspect-ratio: 1;
-    max-width: none;
+    max-width: 300px;
     width: 100%;
     min-height: 0;
     margin: 0 auto;
@@ -2520,8 +2520,8 @@ body {
     top: 14px;
     right: 18px;
     font-size: 2rem;
-    color: #ef7b09;
-    opacity: 0.1;
+    color: #f6a04d;
+    opacity: 0.08;
     font-family: 'Poppins', sans-serif;
     line-height: 1;
   }
@@ -2536,9 +2536,9 @@ body {
   }
   
   .testimonial p {
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    line-height: 1.5;
+    font-size: 1.08rem;
+    margin-bottom: 4px;
+    line-height: 1.45;
     text-align: left;
   }
   
@@ -2718,7 +2718,7 @@ body {
   }
   
   .who-we-are-text {
-    text-align: center;
+    text-align: left;
     padding: 0 8px;
   }
   
